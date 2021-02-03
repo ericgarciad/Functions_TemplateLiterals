@@ -1,24 +1,25 @@
 //Nivel 1
 
-/* Ejercicio1 - Crear una funció que imprimeixi en consola el nom d'usuari sent invocada externament i passant el nom 
-com a paràmetre.
+/* Ejercicio1 - Crear una funció que imprimeixi en consola el nom d'usuari sent invocada externament i 
+passant el nom com a paràmetre.
 */
 
 /* Creamos la variable "argumentos" la que espera que le envies un argumento por linea de comandos 
 de la siguiente manera:node app.js Eric
 */
 
-let argumentos = process.argv
 
 function nombreUsuario(argumentos) {
 
     //Devuelve en la variable argumentos el nombre que hayas introducido por linea de comandos.
-    return "El nombre de usuario introducido en la consola es: " + argumentos;
+    return "El nombre de usuario introducido es " + argumentos;
 }
 
-console.log("Nivel 1 - Ejercicio 1")
-console.log(nombreUsuario(argumentos))
-console.log(" ")
+let nomUsuario = "Eric García";
+
+console.log("Nivel 1 - Ejercicio 1");
+console.log(nombreUsuario(nomUsuario));
+console.log(" ");
 
 //Nivel 2 
 
@@ -53,54 +54,107 @@ imprimeixi per pantalla els números de l'1 a el 10
 */
 
 
-let uno = function() {
-    return 1;
+let uno = function () {
+    let i = 0;
+    console.log("Función 1");
+    while (i < 10) {
+        console.log(i);
+        i++;
+    }
 }
 
-let dos = function() {
-    return uno() + 1;
+let dos = function () {
+    let i = 0;
+    console.log("Función 2");
+    while (i < 10) {
+        console.log(i);
+        i++;
+    }
 }
 
-let tres = function() {
-    return dos() + 1;
+let tres = function () {
+    let i = 0;
+    console.log("Función 3");
+    while (i < 10) {
+        console.log(i);
+        i++;
+    }
 }
 
-let cuatro = function() {
-    return tres() + 1;
+let cuatro = function () {
+    let i = 0;
+    console.log("Función 4");
+    while (i < 10) {
+        console.log(i);
+        i++;
+    }
 }
 
-let cinco = function() {
-    return cuatro() + 1;
+let cinco = function () {
+    let i = 0;
+    console.log("Función 5");
+    while (i < 10) {
+        console.log(i);
+        i++;
+    }
 }
 
-let seis = function() {
-    return cinco() + 1;
+let seis = function () {
+    let i = 0;
+    console.log("Función 6");
+    while (i < 10) {
+        console.log(i);
+        i++;
+    }
 }
 
-let siete = function() {
-    return seis() + 1;
+let siete = function () {
+    let i = 0;
+    console.log("Función 7");
+    while (i < 10) {
+        console.log(i);
+        i++;
+    }
 }
 
-let ocho = function() {
-    return siete() +1;
+let ocho = function () {
+    let i = 0;
+    console.log("Función 8");
+    while (i < 10) {
+        console.log(i);
+        i++;
+    }
 }
 
-let nueve = function() {
-    return ocho() + 1;
+let nueve = function () {
+    let i = 0;
+    console.log("Función 9");
+    while (i < 10) {
+        console.log(i);
+        i++;
+    }
 }
 
-let diez = function() {
-    return nueve() + 1;
+let diez = function () {
+    let i = 0;
+    console.log("Función 10");
+    while (i < 10) {
+        console.log(i);
+        i++;
+    }
 }
 
-let matrizFunciones = [[uno() , dos(), tres(), cuatro(), cinco()] , 
-                      [seis(), siete(), ocho(), nueve(), diez()]];
+console.log("Nivel 3 - Ejercicio 1");
+
+let matrizFunciones = [[uno(), dos(), tres(), cuatro(), cinco()],
+                       [seis(), siete(), ocho(), nueve(), diez()]];
 
 let i;
 
 for (i = 0; i < matrizFunciones.length; i++) {
-    console.log(matrizFunciones[i]);
+    matrizFunciones[i];
 }
+
 
 //Nivel 3
 
@@ -108,13 +162,14 @@ for (i = 0; i < matrizFunciones.length; i++) {
 per pantalla el nom d'usuari rebut com a paràmetre
 */
 
-// Creamos variable que recibira un nombre de usuari introducido por linea de comandos
-let nombreUsuarioConsola = process.argv;
+// Creamos variable con el nombre de usuario
+let nombreUsuarioNivel3 = "Eric García Domingo";
 
+console.log("Nivel 3 - Ejercicio 2");
 //Creamos función anónima autoinvocable e igualada a una variable que imprime el parámetro introducido
-//por linea de comandos.
 //Añadiendo (); al finalizar la función, se autoinvoca y muestra por consola lo que devuelve.
-let funcionAutoinvocable = function () {
-    console.log("El nombre de usuario recibido como parámetro es " + nombreUsuarioConsola);
+let funcionAutoinvocable = function (param) {
+    param = nombreUsuarioNivel3;
+    console.log("El nombre de usuario recibido como parámetro es " + param);
 }();
 
