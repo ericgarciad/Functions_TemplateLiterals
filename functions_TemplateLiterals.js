@@ -53,108 +53,39 @@ console.log(" ");
 imprimeixi per pantalla els números de l'1 a el 10
 */
 
-
-let uno = function () {
-    let i = 0;
-    console.log("Función 1");
-    while (i < 10) {
-        console.log(i);
-        i++;
-    }
-}
-
-let dos = function () {
-    let i = 0;
-    console.log("Función 2");
-    while (i < 10) {
-        console.log(i);
-        i++;
-    }
-}
-
-let tres = function () {
-    let i = 0;
-    console.log("Función 3");
-    while (i < 10) {
-        console.log(i);
-        i++;
-    }
-}
-
-let cuatro = function () {
-    let i = 0;
-    console.log("Función 4");
-    while (i < 10) {
-        console.log(i);
-        i++;
-    }
-}
-
-let cinco = function () {
-    let i = 0;
-    console.log("Función 5");
-    while (i < 10) {
-        console.log(i);
-        i++;
-    }
-}
-
-let seis = function () {
-    let i = 0;
-    console.log("Función 6");
-    while (i < 10) {
-        console.log(i);
-        i++;
-    }
-}
-
-let siete = function () {
-    let i = 0;
-    console.log("Función 7");
-    while (i < 10) {
-        console.log(i);
-        i++;
-    }
-}
-
-let ocho = function () {
-    let i = 0;
-    console.log("Función 8");
-    while (i < 10) {
-        console.log(i);
-        i++;
-    }
-}
-
-let nueve = function () {
-    let i = 0;
-    console.log("Función 9");
-    while (i < 10) {
-        console.log(i);
-        i++;
-    }
-}
-
-let diez = function () {
-    let i = 0;
-    console.log("Función 10");
-    while (i < 10) {
-        console.log(i);
-        i++;
-    }
-}
-
 console.log("Nivel 3 - Ejercicio 1");
 
-let matrizFunciones = [[uno(), dos(), tres(), cuatro(), cinco()],
-                       [seis(), siete(), ocho(), nueve(), diez()]];
+//Creamos función que cuenta e imprimer por pantalla del 0 al 10
+function contarNum() {
+    let i;
+    console.log("Función iterativa");
 
-let i;
-
-for (i = 0; i < matrizFunciones.length; i++) {
-    matrizFunciones[i];
+    for(i = 0; i <= 10; i++) {
+        console.log(i);
+    }
 }
 
+// Creamos array vacío
+
+let matrizFunciones = [];
+
+// Llenamos el array iterando 10 veces por la misma función
+let i = 0;
+
+while (i < 10) {
+    matrizFunciones.push(function() {contarNum(); });
+    i++;
+}
+
+// Llamamos a todas las posiciones del Array
+function llamadaArray() {
+    while (matrizFunciones.length){
+        let fnc = matrizFunciones.splice(0,1)[0]
+        fnc();
+    }
+}
+
+llamadaArray();
 
 //Nivel 3
 
